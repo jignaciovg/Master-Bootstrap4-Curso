@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplos de flexbox</title>
+
+    <style>
+      section {
+        width: 300px;
+        height: 300px;
+        border: 3px solid #000;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap:wrap;
+      }
+
+      .no-wrap{
+        width: 200px;
+        height: 200px;
+        border: 3px solid #000;
+        margin: 0 auto;
+        display: flex;
+      }
+      .contenedor {
+        width: 300px;
+        height: 300px;
+        border: 3px solid #000;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .contenedor-space {
+        width: 300px;
+        height: 300px;
+        border: 3px solid #000;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .contenedor-center {
+        width: 300px;
+        height: 300px;
+        border: 3px solid #000;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+      }
+
+      .contenedor-around{
+        width: 300px;
+        height: 300px;
+        border: 3px solid #000;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .grow{
+        width: 300px;
+        height: 300px;
+        border: 3px solid #000;
+        margin: 0 auto;
+        display: flex;
+      }
+
+      .grow article{
+        flex-grow: 1;
+      }
+
+      .caja1 {
+        background-color: purple;
+      }
+      .caja2 {
+        background-color: yellowgreen;
+      }
+      .caja3 {
+        background-color: red;
+      }
+      h2,
+      p,
+      h3 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Flex Direction Default (row)</h2>
+    <p>display:flex</p>
+    <p>flex-direction: row</p>
+    <p>flex-wrap:wrap</p>
+
+    <section>
+      <article class="caja1">Caja 1</article>
+      <article class="caja2">Caja 2</article>
+      <article class="caja3">Caja 3</article>
+      <article class="caja1">Caja 4</article>
+      <article class="caja2">Caja 5</article>
+      <article class="caja3">Caja 6</article>
+      <article class="caja1">Caja 7</article>
+      <article class="caja2">Caja 8</article>
+      <article class="caja3">Caja 9</article>
+      <article class="caja1">Caja 10</article>
+      <article class="caja2">Caja 11</article>
+      <article class="caja3">Caja 12</article>
+    </section>
+
+    <h2>Flexbox Nowrap</h2>
+    <p>display:flex</p>
+    <p>flex-direction: row</p>
+    <p>flex-wrap:nowrap</p>
+
+    <div class="no-wrap">
+      <article class="caja1">Caja 1</article>
+      <article class="caja2">Caja 2</article>
+      <article class="caja3">Caja 3</article>
+      <article class="caja1">Caja 4</article>
+      <article class="caja2">Caja 5</article>
+      <article class="caja3">Caja 6</article>
+      <article class="caja1">Caja 7</article>
+      <article class="caja2">Caja 8</article>
+      <article class="caja3">Caja 9</article>
+      <article class="caja1">Caja 10</article>
+      <article class="caja2">Caja 11</article>
+      <article class="caja3">Caja 12</article>
+    </div>
+
+    <h2>Flexbox Space-between</h2>
+    <p>display:flex</p>
+    <p>justify-content: space-between</p>
+    <div class="contenedor-space">
+      <article class="caja1">Caja 1</article>
+      <article class="caja2">Caja 2</article>
+      <article class="caja3">Caja 3</article>
+    </div>
+
+    <h2>Flexbox Center</h2>
+    <p>display:flex</p>
+    <p>justify-content: space-between</p>
+    <div class="contenedor-center">
+      <article class="caja1">Caja 1</article>
+      <article class="caja2">Caja 2</article>
+      <article class="caja3">Caja 3</article>
+    </div>
+
+
+    <h2>Flexbox Space-around</h2>
+    <p>display:flex</p>
+    <p>justify-content: space-around</p>
+    <div class="contenedor-around">
+      <article class="caja1">Caja 1</article>
+      <article class="caja2">Caja 2</article>
+      <article class="caja3">Caja 3</article>
+      <article class="caja1">Caja 1</article>
+    </div>
+
+    <h2>Flex Direction (column)</h2>
+    <p>display:flex</p>
+    <p>flex-direction: column</p>
+
+    <div class="contenedor">
+      <article class="caja1">Caja 1</article>
+      <article class="caja2">Caja 2</article>
+      <article class="caja3">Caja 3</article>
+    </div>
+
+    
+    <hr>    
+    <h3>justify-content: alinea a los objetos padres</h3>
+    <h3>align-items: alinea los objetos secundarios (hijos)</h3>
+    <h3>align-self: alinea los objetos individualmente, ignora el valor del padre</h3>
+    
+    <p>"stretch" ocupa toda la altura del padre</p>
+    <p>"flex-start" se alinean al margen superior</p>
+    <p>"flex-end" se alinean al margen inferior</p>
+    <p>"center" se centra de todos los ejes</p>
+    <hr> 
+    
+
+
+    <h2>Flex Grow</h2>
+    <p>display:flex</p>
+    <p>flex-grow: 1</p>
+    <p>"flex-grow" ocupa el espacio disponible del padre</p>
+
+    <div class="grow">
+      <article class="caja1">Caja 1</article>
+      <article class="caja2">Caja 2</article>
+      <article class="caja3">Caja 3</article>
+    </div>
+
+  </body>
+</html>
