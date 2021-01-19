@@ -5,27 +5,41 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Soluciones tecnologicas</title>
-  </head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+     <!--GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+     <!--FONTAWESOME-->
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <!--ESTILOS-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
   
   <body>
 
     <section class="bienvenidos">
         <!--Navegacion-->
-        <header class="encabezado" role="banner">
-            <a href="index.html">
+        <header class="encabezado navbar-fixed-top" role="banner">
+            <div class="container">
+            <a href="index.html" class="logo">
                 <img src="./images/logo.svg" alt="logotipo">
             </a>
-            <button type="button" class="boton-buscar">Busqueda</button>
-            <button type="button" class="boton-menu">Menu</button>
+            <button type="button" class="boton-buscar" data-toggle="collapse" data-target="#bloque-buscar" aria-expanded="false">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="boton-menu" data-toggle="collapse" data-target="#menu-principal" aria-expanded="false">
+                <i class="fa fa-reorder" aria-hidden="true"></i>
+            </button>
 
-            <form action="#" id="bloque-buscar">
+            <form action="#" id="bloque-buscar" class="collapse">
                 <div class="contenedor-bloque-buscar">
                     <input type="text" placeholder="Buscar...">
                     <input type="submit" value="Buscar">
                 </div>
             </form>
 
-            <nav id="menu-principal">
+            <nav id="menu-principal" class="collapse">
                 <ul>
                     <li class="active"><a href="index.html">Inicio</a></li>
                     <li><a href="nosotros.html">Nosotros</a></li>
@@ -33,6 +47,7 @@
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
+        </div>
         </header>
 
         <!--Primer Bloque-->
@@ -132,5 +147,9 @@
 
     <a href="ir-arriba">Ir arriba</a>
 
+    <!-- Carga de archivos  JS -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

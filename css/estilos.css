@@ -1,0 +1,94 @@
+html{
+  font-size: 15px;
+}
+body{
+  background: #12AFAF;
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+}
+.encabezado{
+  background-color: #111111;
+  color: #FFFF;
+  padding: .5rem 0;
+}
+.encabezado .container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.encabezado .container .logo img{
+  width: 150px;
+  height: auto;
+}
+/*Botones menu*/
+.boton-buscar, 
+.boton-menu{
+  border: 0;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0 .5rem;
+  background: transparent;
+  color: #FFFF;
+}
+
+.boton-buscar:focus, 
+.boton-menu:focus{
+  outline: 0;
+  color: #12AFAF;
+}
+
+.boton-buscar{
+  margin-left: auto;
+  margin-right: .7rem;
+}
+
+/*Formulario busqueda*/
+#bloque-buscar{
+  flex: 1 1 100%;
+}
+
+.contenedor-bloque-buscar{
+  background-color: green;
+  display: flex;
+  height: 3rem;
+  margin: 1rem 0;
+}
+
+.contenedor-bloque-buscar input[type="text"]{
+  border: 0;
+  border-radius: 5px 0 0 5px;
+  padding: 1rem;
+}
+
+.contenedor-bloque-buscar input[type="submit"]{
+  border: 0;
+  border-radius: 0 5px 5px 0;
+  flex: 1 1 auto;
+  background-color: #12AFAF;
+  color: #FFFF;
+}
+
+#menu-principal{
+  flex:1 1 100%;
+}
+
+#menu-principal ul{
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+#menu-principal ul a{
+  display: block;
+  padding: .8rem 0;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  border-top: 1px solid rgb(148, 146, 146);
+  text-decoration: none;
+}
+
+#menu-principal ul a:hover,
+#menu-principal ul li.active a{
+  color: #12AFAF;
+}
+
