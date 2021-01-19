@@ -2,7 +2,6 @@ html{
   font-size: 15px;
 }
 body{
-  background: #12AFAF;
   font-family: 'Open Sans', sans-serif;
   color: black;
 }
@@ -92,3 +91,58 @@ body{
   color: #12AFAF;
 }
 
+.btn-primary{
+  background-color: #12AFAF;
+  border-color: transparent;
+  transition: all .5s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active:hover{
+  background-color: #009500;
+  border-color: transparent;
+}
+
+.texto-encabezado .display-4{
+  padding-top: 5rem;
+}
+.texto-encabezado .btn-primary{
+  margin-top: 1rem;
+}
+.texto-encabezado{
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+}
+
+.bienvenidos{
+  background-image: url(../images/fondo-encabezado.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-position-x: center;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.flecha-bajar a{
+  display: inline-block;
+  color: #FFFF;
+  font-size: 4rem;
+  animation: flecha-animada 2s ease-in-out infinite;
+}
+
+@keyframes flecha-animada{
+  from{
+    transform: translateY(0);
+  } 
+  50%{
+    transform: translateY(6px);
+  }
+  to{
+    transform: translateY(0);
+  }
+}
